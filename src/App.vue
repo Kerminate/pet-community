@@ -1,0 +1,28 @@
+<template>
+  <div id="app">
+    <head-bar></head-bar>
+    <router-view/>
+  </div>
+</template>
+
+<script>
+import HeadBar from '@/components/HeadBar'
+
+export default {
+  name: 'app',
+  components: {
+    HeadBar
+  }
+}
+</script>
+
+<style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
