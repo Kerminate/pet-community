@@ -5,16 +5,18 @@
       <el-input placeholder="请输入关键词" suffix-icon="el-icon-search"></el-input>
     </el-col>
     <el-col :span="6" class="register">
-      <el-button type="success">登录/注册</el-button>
+      <el-button type="success" @click="showLogin">登录/注册</el-button>
     </el-col>
   </el-row>
 </template>
 
 <script>
+import Login from '@/components/Login'
+
 export default {
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+  methods: {
+    showLogin () {
+      this.$parent.$refs.dialog.showDialog(Login)  // 调用父组件中的指定某个子组件的方法
     }
   }
 }
